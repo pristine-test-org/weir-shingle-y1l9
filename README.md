@@ -8,6 +8,6 @@ framework. The page reads a live list from the shared Supabase test project.
 
 | App | Folder | Host | Production | Preview gate |
 |---|---|---|---|---|
-| Avens | `apps/avens-ep4` | Vercel | _not deployed_ | no |
-| Bugle | `apps/bugle-zes` | Vercel | _not deployed_ | no |
-| Cudweed | `apps/cudweed-ebx` | Render | _not deployed_ | no |
+| Avens | `apps/avens-ep4` | Vercel | https://weir-shingle-y1l9-avens-ep4.vercel.app | no |
+| Bugle | `apps/bugle-zes` | Vercel | https://weir-shingle-y1l9-bugle-zes.vercel.app | no |
+| Cudweed | `apps/cudweed-ebx` | Render | https://weir-shingle-y1l9-cudweed-ebx.onrender.com | no |
