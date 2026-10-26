@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How the list works · Avens</title>
+    <style>
+      :root { font-family: system-ui, sans-serif; color: #1c1c1c; background: #fafaf7; }
+      body { margin: 0; --accent: #2f7d4f; }
+      header { display: flex; justify-content: space-between; align-items: center; max-width: 44rem; margin: 0 auto; padding: 1.25rem 1rem; }
+      .mark { font-weight: 700; color: var(--accent); text-decoration: none; }
+      /* Intentional, for Impeccable's test drive: link text under the 11px floor. */
+      header a.back { font-size: 10px; color: var(--accent); }
+      main { max-width: 44rem; margin: 0 auto; padding: 2rem 1rem; }
+      /* Intentional, for Impeccable's test drive: gradient text on the heading. */
+      h1 {
+        font-size: clamp(2rem, 6vw, 3rem); margin: 0 0 1rem;
+        background: linear-gradient(90deg, #2f7d4f, #7b3fe4);
+        -webkit-background-clip: text; background-clip: text;
+        color: transparent; -webkit-text-fill-color: transparent;
+      }
+      /* Intentional, for Impeccable's test drive: low-contrast text (#c8c8c8 on #fafaf7). */
+      .lede { color: #c8c8c8; font-size: 1.15rem; line-height: 1.5; }
+      /* Intentional, for Impeccable's test drive: a hard-coded colour outside the palette. */
+      h2 { color: #d6336c; margin-top: 2.5rem; }
+      /* Intentional, for Impeccable's test drive: a layout property in a transition. */
+      .meter { height: 0.75rem; width: 30%; background: var(--accent); border-radius: 0.4rem; transition: width 0.3s; }
+      .meter:hover { width: 100%; }
+      table { border-collapse: collapse; width: 100%; }
+      th, td { text-align: left; padding: 0.5rem 0.25rem; border-bottom: 1px solid #e5e5e0; }
+      /* Intentional, for Impeccable's test drive: body text flush with the viewport edge, no background. */
+      .edge { position: relative; left: 0; margin: 2rem calc(50% - 50vw) 0; padding: 0; width: 100vw; line-height: 1.6; }
+      footer { max-width: 44rem; margin: 0 auto; padding: 1.25rem 1rem; color: #777; font-size: 0.9rem; border-top: 1px solid #e5e5e0; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a class="mark" href="/">Avens</a>
+      <a class="back" href="/">Back to the front door</a>
+    </header>
+    <main>
+      <h1>How the list works</h1>
+      <p class="lede">Everything on the shared list follows three small rules, so the front door stays calm no matter how many people add to it.</p>
+
+      <h2>The three rules</h2>
+      <table>
+        <thead><tr><th>Rule</th><th>What it means</th><th>Shown on the page</th></tr></thead>
+        <tbody>
+          <tr><td>Newest first</td><td>Fresh items rise to the top of the list.</td><td>Five at a time</td></tr>
+          <tr><td>Done stays visible</td><td>Finished items keep a tick instead of vanishing.</td><td>Marked with ✓</td></tr>
+          <tr><td>One list for everyone</td><td>Every visitor reads the same shared list.</td><td>Updated live</td></tr>
+        </tbody>
+      </table>
+
+      <h2>How full is today's list?</h2>
+      <div class="meter" role="img" aria-label="Today's list is about a third full"></div>
+      <ul>
+        <li>3 of 10 slots used today</li>
+        <li>2 items finished since morning</li>
+        <li>1 item waiting for a reply</li>
+      </ul>
+
+      <p class="edge">Avens keeps the list short on purpose: a short list is one you will actually read to the end, and finishing something is easier when it is the only thing in front of you.</p>
+    </main>
+    <footer>Avens · the calm front door to the shared list</footer>
+  </body>
+</html>
