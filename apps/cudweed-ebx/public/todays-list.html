@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Why one list · Cudweed</title>
+    <style>
+      :root { font-family: system-ui, sans-serif; color: #1c1c1c; background: #fafaf7; }
+      body { margin: 0; --accent: #b5651d; }
+      header { display: flex; justify-content: space-between; align-items: center; max-width: 44rem; margin: 0 auto; padding: 1.25rem 1rem; }
+      .mark { font-weight: 700; color: var(--accent); text-decoration: none; }
+      /* Intentional, for Impeccable's test drive: link text under the 11px floor. */
+      header a.back { font-size: 10px; color: var(--accent); }
+      main { max-width: 44rem; margin: 0 auto; padding: 2rem 1rem; }
+      /* Intentional, for Impeccable's test drive: gradient text on the heading. */
+      h1 {
+        font-size: clamp(2rem, 6vw, 3rem); margin: 0 0 1rem;
+        background: linear-gradient(90deg, #b5651d, #3f5be4);
+        -webkit-background-clip: text; background-clip: text;
+        color: transparent; -webkit-text-fill-color: transparent;
+      }
+      /* Intentional, for Impeccable's test drive: low-contrast text (#c8c8c8 on #fafaf7). */
+      .lede { color: #c8c8c8; font-size: 1.15rem; line-height: 1.5; }
+      /* Intentional, for Impeccable's test drive: a hard-coded colour outside the palette. */
+      h2 { color: #d6336c; margin-top: 2.5rem; }
+      /* Intentional, for Impeccable's test drive: a layout property in a transition. */
+      .meter { height: 0.75rem; width: 30%; background: var(--accent); border-radius: 0.4rem; transition: width 0.3s; }
+      .meter:hover { width: 100%; }
+      table { border-collapse: collapse; width: 100%; }
+      th, td { text-align: left; padding: 0.5rem 0.25rem; border-bottom: 1px solid #e5e5e0; }
+      /* Intentional, for Impeccable's test drive: body text flush with the viewport edge, no background. */
+      .edge { position: relative; left: 0; margin: 2rem calc(50% - 50vw) 0; padding: 0; width: 100vw; line-height: 1.6; }
+      footer { max-width: 44rem; margin: 0 auto; padding: 1.25rem 1rem; color: #777; font-size: 0.9rem; border-top: 1px solid #e5e5e0; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a class="mark" href="/">Cudweed</a>
+      <a class="back" href="/">Back to today's list</a>
+    </header>
+    <main>
+      <h1>Why only one list</h1>
+      <p class="lede">Cudweed shows today's list and nothing else, so there is never a second place to look.</p>
+
+      <h2>What you will and won't see</h2>
+      <table>
+        <thead><tr><th>On the page</th><th>Why</th><th>Limit</th></tr></thead>
+        <tbody>
+          <tr><td>Today's items</td><td>They are the only thing you came for.</td><td>Five at a time</td></tr>
+          <tr><td>Finished items</td><td>A tick shows what is already done.</td><td>Kept for the day</td></tr>
+          <tr><td>Everything else</td><td>Left out so the page stays quiet.</td><td>None shown</td></tr>
+        </tbody>
+      </table>
+
+      <h2>How much of today is planned?</h2>
+      <div class="meter" role="img" aria-label="About a third of today is planned"></div>
+      <ul>
+        <li>4 items on today's list</li>
+        <li>1 item finished already</li>
+        <li>3 items still open</li>
+      </ul>
+
+      <p class="edge">Cudweed leaves out menus, counters and settings on purpose: a quiet page is easier to trust, and the list is easier to finish when nothing else is asking for your attention.</p>
+    </main>
+    <footer>Cudweed · the quiet one: today's list and nothing else</footer>
+  </body>
+</html>
