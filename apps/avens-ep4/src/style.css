@@ -20,3 +20,4 @@ header a { color: var(--accent); }
 footer { color: #777; font-size: 0.9rem; border-top: 1px solid #e5e5e0; }
 
 /* proof push */
+footer { letter-spacing: 0.01em; }
